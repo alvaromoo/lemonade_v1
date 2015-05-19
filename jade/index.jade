@@ -12,14 +12,14 @@ html(lang='es')
 		- msTileColor = {name: 'msapplication-TileColor', content: '#ffffff'}
 		- msTileImage = {name: 'msapplication-TileImage', content: '../images/favicon/ms-icon-144x144.png'}
 		- msThemeColor = {name: 'theme-color', content: '#ffffff'}
-		each ms in [metaDescription, metaViewport, msTileColor, msTileImage, msThemeColor]
-			meta(name='#{ms.name}', content='#{ms.content}')
+		each meta in [metaDescription, metaViewport, msTileColor, msTileImage, msThemeColor]
+			meta(name='#{meta.name}', content='#{meta.content}')
 
 		//- Apple Touch Favicons
 		each size in ['57', '60', '72', '76', '114', '120', '144', '152', '180']
 			link(rel='apple-touch-icon', sizes='#{size}x#{size}', href='../images/favicon/apple-icon-#{size}x#{size}.png')
 
-		//- Android Favicons
+		//- Android Favicon
 		link(rel='icon', type= 'image/png', sizes='192x192', href='../images/favicon/android-icon-192x192.png')
 
 		//- Standart Favicons
