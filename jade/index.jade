@@ -6,14 +6,20 @@ html(lang='es')
 
 		title A refreshing sip of Lemonade
 
-		meta(name='description', content='Limonada fresquita, para los calores del verano')
-		meta(name='viewport', content='width=device-width, initial-scale=1')
+		//- Metas
+		- metaDescription = {name: 'description', content: 'Limonada fresquita, para los calores del verano'}
+		- metaViewport = {name: 'viewport', content: 'width=device-width, initial-scale=1'}
+		- msTileColor = {name: 'msapplication-TileColor', content: '#ffffff'}
+		- msTileImage = {name: 'msapplication-TileImage', content: '../images/favicon/ms-icon-144x144.png'}
+		- msThemeColor = {name: 'theme-color', content: '#ffffff'}
+		each ms in [metaDescription, metaViewport, msTileColor, msTileImage, msThemeColor]
+			meta(name='#{ms.name}', content='#{ms.content}')
 
 		//- Apple Touch Favicons
 		each size in ['57', '60', '72', '76', '114', '120', '144', '152', '180']
 			link(rel='apple-touch-icon', sizes='#{size}x#{size}', href='../images/favicon/apple-icon-#{size}x#{size}.png')
 
-		//- Android Favicon
+		//- Android Favicons
 		link(rel='icon', type= 'image/png', sizes='192x192', href='../images/favicon/android-icon-192x192.png')
 
 		//- Standart Favicons
@@ -23,12 +29,6 @@ html(lang='es')
 		//- Manifest
 		link(rel= 'manifest', href= '../images/favicon/manifest.json')
 
-		//- MS
-		- msTitleColor = {name: 'msapplication-TileColor', content: '#ffffff'}
-		- msTitleImage = {name: 'msapplication-TileImage', content: '../images/favicon/ms-icon-144x144.png'}
-		- msThemeColor = {name: 'theme-color', content: '#ffffff'}
-		each ms in [msTitleColor, msTitleImage, msThemeColor]
-			meta(name='#{ms.name}', content='#{ms.content}')
 
 		//- CSS
 		each css in ['main']
