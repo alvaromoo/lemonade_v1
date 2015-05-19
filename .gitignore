@@ -1,2 +1,2 @@
 # Gitignore
-.cfg
+*.cfg
