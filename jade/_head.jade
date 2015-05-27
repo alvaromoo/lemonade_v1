@@ -4,7 +4,7 @@ html(lang='es')
 		meta(charset='utf-8')
 		meta(http-equiv='X-UA-Compatible', content='IE=edge')
 
-		title Lemonade | A refreshing sip
+		title A refreshing sip of Lemonade
 
 		//- Metas
 		- metaDescription = {name: 'description', content: 'Limonada fresquita, para los calores del verano'}
@@ -30,6 +30,9 @@ html(lang='es')
 		link(rel= 'manifest', href= '../images/favicon/manifest.json')
 
 
+		//- Fontawesome
+		link(rel='stylesheet', href='http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css', type='text/css')
+
 		//- CSS
 		each css in ['main']
 			link(rel='stylesheet', href='../css/#{css}.css', type='text/css')
@@ -38,16 +41,10 @@ html(lang='es')
 		each js in ['http://code.jquery.com/jquery-1.11.3.min.js', '../js/min/script.min.js']
 			script(src='#{js}', type='text/javascript')
 				
-	include _lorem
+	include helpers/_lorem
 
-	body
-		header
-			nav
-		article
-			h1 Título de prueba
-			div.felicidad 
-				h2 A continuación unos párrafos aleatorios
-			each parrafo in [12, 38, 52, 41, 25, 16, 37, 28, 29, 23]
-					p
-						mixin lipsum(parrafo, 'sentences')
-		footer
+body
+	header
+		nav
+			each pagina in ['Home', 'Placeholder']
+				a(href='#{pagina.toLowerCase()}.html') #{pagina}

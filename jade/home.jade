@@ -1,0 +1,10 @@
+include _head
+
+article
+	h1 Portada
+	h2 A continuación unos párrafos aleatorios
+	each parrafo in [12, 38, 52, 41, 25]
+		p
+			mixin lipsum(parrafo, 'sentences')
+				
+include _footer

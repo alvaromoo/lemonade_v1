@@ -1,0 +1,10 @@
+footer
+	- web = {enlace: 'alvaromoo.com/', tipo: 'Web', fontawesome: 'terminal'}
+	- github = {enlace: 'github.com/alvaromoo', tipo: 'GitHub', fontawesome: 'github'}
+	- codepen = {enlace: 'codepen.io/alvaromoo', tipo: 'Codepen', fontawesome: 'codepen'}
+	- twitter = {enlace: 'twitter.com/thealvaromoo', tipo: 'Twitter', fontawesome: 'twitter'}
+	- facebook = {enlace: 'facebook.com/thealvaromoo', tipo: 'Facebook', fontawesome: 'facebook'}
+	- redes = [web, github, codepen, twitter, facebook]
+	each red in redes
+		a(href='http://#{red.enlace}', target='_blank', title='Ir a mi cuenta de #{red.tipo}', alt='#{red.fontawesome}', class='#{red.tipo.toLowerCase()}')
+			i(class='fa fa-#{red.fontawesome}')

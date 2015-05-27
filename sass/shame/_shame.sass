@@ -1,8 +1,36 @@
-// Shame
-$color-main: $flat-sunflower
-
 body
-	h1
-		color: $color-main
-	h2
-		color: $flat-gray-4
+	article
+		margin: 30px
+
+nav,
+footer
+	background-color: $color-grey-lightest
+	text-align: center
+
+nav
+	a
+		color: $color-grey-darkest
+		display: inline-block
+		font-size: 20px
+		padding: 10px 20px
+		&.activa
+			background-color: $color-grey-dark
+			color: white
+		&:hover
+			background-color: $flat-yellow-1
+			color: white
+
+footer
+	padding: 50px
+	a
+		color: $color-grey-light
+		margin: 0 30px
+		font-size: 60px
+		&:first-of-type
+			margin-left: 0
+		&:last-of-type
+			margin-right: 0
+		&:hover
+			color: $color-main
+			&:before
+				color: white
