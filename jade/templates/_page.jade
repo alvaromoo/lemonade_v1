@@ -1,0 +1,18 @@
+include ../layout/_head
+
+body
+	header
+		nav
+			- var portada = {nombre: 'Home', archivo: 'home'}
+			- var lorem = {nombre: 'Lorem Ipsum', archivo: 'lorem'}
+			each pagina in [portada, lorem]
+				a(href='#{pagina.archivo}.html') #{pagina.nombre}
+
+		block pageTitle
+			h1 Título de la página
+
+	article
+		block contenido
+
+	footer
+		include ../layout/_footer

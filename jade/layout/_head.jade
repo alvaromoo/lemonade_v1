@@ -4,7 +4,7 @@ html(lang='es')
 		meta(charset='utf-8')
 		meta(http-equiv='X-UA-Compatible', content='IE=edge')
 
-		title A refreshing sip of Lemonade
+		title Lemonade | A refreshing sip 
 
 		//- Metas
 		- metaDescription = {name: 'description', content: 'Limonada fresquita, para los calores del verano'}
@@ -41,10 +41,4 @@ html(lang='es')
 		each js in ['http://code.jquery.com/jquery-1.11.3.min.js', '../js/min/script.min.js']
 			script(src='#{js}', type='text/javascript')
 				
-	include helpers/_lorem
-
-body
-	header
-		nav
-			each pagina in ['Home', 'Placeholder']
-				a(href='#{pagina.toLowerCase()}.html') #{pagina}
+	include ../helpers/_lorem

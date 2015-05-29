@@ -1,10 +1,14 @@
-include _head
+extends templates/_page
 
-article
-	h1 Portada
-	h2 A continuación unos párrafos aleatorios
-	each parrafo in [12, 38, 52, 41, 25]
-		p
-			mixin lipsum(parrafo, 'sentences')
-				
-include _footer
+block pageTitle
+	h1 Bienvenido
+
+block contenido
+	h1 Bienvenido a Lemonade
+	p Lemonade es una estructura de proyecto inicial para desarrollo Frontend. El objetivo es facilitar el inicio de nuevos proyectos, ofreciéndote una base sólida, potente y flexible sobre la que poder hacer que tus ideas se hagan realidad.
+	p Lemonade utiliza dos potentes preprocesadores que lo harán todo más sencillo:
+	ul
+		li JADE
+		li SASS
+	p Espero que el proyecto te sea de utilidad.
+	p ¡Un abrazo!

@@ -6,4 +6,11 @@ $(document).ready(function(){
 			$(this).addClass("activa");
 		}
 	});
-})
+});
+
+
+$(document).ready(function(){
+	$('.lanza').click(function(){
+		$('.recibe').attr('placeholder', 'Cambiado');
+	});
+});

@@ -1,0 +1,10 @@
+extends templates/_page
+
+block pageTitle
+	h1 Mixin Lorem Ipsum
+
+block contenido
+	h1 Párrafos generados con mixin Lorem Ipsum
+	each parrafo in [12, 25, 15, 21, 18]
+		p
+			mixin lipsum(parrafo, 'sentences')
