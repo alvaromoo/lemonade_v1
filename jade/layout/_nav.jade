@@ -1,0 +1,4 @@
+- var portada = {nombre: 'Home', archivo: 'index'}
+			- var lorem = {nombre: 'Lorem Ipsum', archivo: 'lorem'}
+			each pagina in [portada, lorem]
+				a(href='#{pagina.archivo}.html') #{pagina.nombre}

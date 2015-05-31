@@ -3,10 +3,7 @@ include ../layout/_head
 body
 	header
 		nav
-			- var portada = {nombre: 'Home', archivo: 'home'}
-			- var lorem = {nombre: 'Lorem Ipsum', archivo: 'lorem'}
-			each pagina in [portada, lorem]
-				a(href='#{pagina.archivo}.html') #{pagina.nombre}
+			include ../layout/_nav
 
 		block pageTitle
 			h1 Título de la página
