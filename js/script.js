@@ -7,10 +7,3 @@ $(document).ready(function(){
 		}
 	});
 });
-
-
-$(document).ready(function(){
-	$('.lanza').click(function(){
-		$('.recibe').attr('placeholder', 'Cambiado');
-	});
-});
