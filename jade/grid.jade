@@ -1,0 +1,11 @@
+extends templates/_page
+
+block pageTitle
+	h1 Grid
+
+block pageContent
+	h1 Lemonade grid
+	p Lemonade cuenta con una sencilla herramienta para crear tus grid de manera rápida, responsive y completamente configurable.
+	ul.grid
+		each elemento in ['Elemento', 'Elemento', 'Elemento', 'Elemento', 'Elemento', 'Elemento', 'Elemento', 'Elemento', 'Elemento', 'Elemento', 'Elemento', 'Elemento']
+			li #{elemento}

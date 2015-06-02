@@ -1,4 +1,5 @@
 - var portada = {nombre: 'Home', archivo: 'index'}
-			- var lorem = {nombre: 'Lorem Ipsum', archivo: 'lorem'}
-			each pagina in [portada, lorem]
-				a(href='#{pagina.archivo}.html') #{pagina.nombre}
+- var lorem = {nombre: 'Lorem Ipsum', archivo: 'lorem'}
+- var grid = {nombre: 'Grid', archivo: 'grid'}
+each pagina in [portada, lorem, grid]
+	a(href='#{pagina.archivo}.html') #{pagina.nombre}
