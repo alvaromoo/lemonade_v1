@@ -17,17 +17,17 @@ html(lang='es')
 
 		//- Apple Touch Favicons
 		each size in ['57', '60', '72', '76', '114', '120', '144', '152', '180']
-			link(rel='apple-touch-icon', sizes='#{size}x#{size}', href='images/favicon/apple-icon-#{size}x#{size}.png')
+			link(rel='apple-touch-icon', sizes='#{size}x#{size}', href='../images/favicon/apple-icon-#{size}x#{size}.png')
 
 		//- Android Favicon
-		link(rel='icon', type= 'image/png', sizes='192x192', href='images/favicon/android-icon-192x192.png')
+		link(rel='icon', type= 'image/png', sizes='192x192', href='../images/favicon/android-icon-192x192.png')
 
 		//- Standart Favicons
 		each size in ['32', '96', '16']
-			link(rel='icon', type= 'image/png', sizes='#{size}x#{size}', href='images/favicon/favicon-#{size}x#{size}.png')
+			link(rel='icon', type= 'image/png', sizes='#{size}x#{size}', href='../images/favicon/favicon-#{size}x#{size}.png')
 
 		//- Manifest
-		link(rel= 'manifest', href= 'images/favicon/manifest.json')
+		link(rel= 'manifest', href= '../images/favicon/manifest.json')
 
 
 		//- Fontawesome
@@ -35,10 +35,10 @@ html(lang='es')
 
 		//- CSS
 		each css in ['main']
-			link(rel='stylesheet', href='css/#{css}.css', type='text/css')
+			link(rel='stylesheet', href='../css/#{css}.css', type='text/css')
 
 		//- Javascripts
-		each js in ['http://code.jquery.com/jquery-1.11.3.min.js', 'js/min/script.min.js']
+		each js in ['http://code.jquery.com/jquery-1.11.3.min.js', '../js/min/script.min.js']
 			script(src='#{js}', type='text/javascript')
 				
 	include ../helpers/_lorem
