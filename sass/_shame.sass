@@ -51,31 +51,14 @@ footer
 			&:before
 				color: white
 
+%grid-item
+	background-color: $color-grey-lightest
+	border: 1px solid $color-grey-light
+	@include border-radius(2px)
+	color: $color-grey-darkest
+	padding: 2%
 
 .grid
-	$columns: 4
-	$gutter: 1%
-	$gutter-columns: $columns - 1
-	$width: (100% - ($gutter * $gutter-columns)) / $columns
-	display: block
-	font-size: 0
-	padding: 0
-	max-width: 100%
-	> * 
-		background-color: $color-grey-lightest
-		border: 1px solid $color-grey-light
-		@include border-radius(2px)
-		@include box-sizing(border-box)
-		color: $color-grey-darkest
-		display: inline-block
-		font-size: 1rem
-		list-style: none
-		padding: 20px
-		margin-top: $gutter
-		margin-right: $gutter
-		width: 100%
-		max-width: $width
-		&:nth-child(#{$columns}n)
-			margin-right: 0
-		&:nth-child(-n+#{$columns})
-			margin-top: 0
+	@include grid(5,1)
+	li
+		@extend %grid-item

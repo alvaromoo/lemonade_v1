@@ -1,0 +1,21 @@
+@mixin grid($columns: 2, $gutter: 2)
+	$gutter-porcentual: $gutter * 1%
+	$gutter-columns: $columns - 1
+	$width: (100% - ($gutter-porcentual * $gutter-columns)) / $columns
+	display: block
+	font-size: 0
+	padding: 0
+	max-width: 100%
+	> *
+		@include box-sizing(border-box)
+		display: inline-block
+		font-size: 1rem
+		margin-top: $gutter-porcentual
+		margin-right: $gutter-porcentual
+		vertical-align: top
+		width: 100%
+		max-width: $width
+		&:nth-child(#{$columns}n)
+			margin-right: 0
+		&:nth-child(-n+#{$columns})
+			margin-top: 0
