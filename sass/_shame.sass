@@ -62,3 +62,49 @@ footer
 	@include grid(5,1)
 	li
 		@extend %grid-item
+
+// Menú Tabs
+$color-tab-active: $flat-red-1
+$color-tab-hover: $flat-red-2
+$color-tab-inactive: white
+$color-tab-border: $color-tab-hover
+
+%reset-list
+	margin: 0
+	padding: 0
+	li
+		list-style: none
+
+.menu-tab
+	border: 1px solid $color-tab-border
+	.menu-tab-options
+		@extend %reset-list
+		overflow: auto
+		width: 100%
+		li
+			background-color: $color-tab-inactive
+			color: $color-tab-hover
+			float: left
+			text-align: center
+			&:hover
+				background-color: $color-tab-hover
+				color: white
+				@include transition($transition)
+			&.activa
+				background-color: $color-tab-active
+				color: white
+			a
+				color: inherit
+				display: block
+				font-weight: 700
+				padding: 10px
+	.menu-tab-content
+		background-color: $color-tab-active
+		color: white
+		> *
+			padding: 50px
+			> *
+				&:first-child
+					margin-top: 0
+				&:last-child
+					margin-bottom: 0
