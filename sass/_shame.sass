@@ -108,3 +108,28 @@ $color-tab-border: $color-tab-hover
 					margin-top: 0
 				&:last-child
 					margin-bottom: 0
+
+// Pruebas de mixin breakpoint
+.breakpoints-box
+	// Estilos para mostrar un cuadrado
+	$height: 400px
+	color: white
+	display: block
+	height: $height
+	font-weight: 700
+	line-height: $height
+	text-align: center
+	text-transform: uppercase
+	width: 100%
+
+	// Secuencia EACH utilizando nesting list y mixin breakpoints
+	$values: desk-xl $flat-red-1 30px, desk-l $flat-green-1 28px, desk-m  $flat-blue-1 26px, desk-s  $flat-yellow-1 24px, mob-xl $flat-red-2 22px, mob-l $flat-green-2 20px, mob-m  $flat-blue-2 18px, mob-s  $flat-orange-2 16px,
+
+	@each $value in $values	
+		$breakpoint: nth($value, 1)
+		$color: nth($value, 2)
+		$font-size: nth($value, 3)
+
+		@include respond-to($breakpoint)
+			background-color: $color
+			font-size: $font-size
