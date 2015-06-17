@@ -133,3 +133,17 @@ $color-tab-border: $color-tab-hover
 		@include respond-to($breakpoint)
 			background-color: $color
 			font-size: $font-size
+
+// Clase comodín para añadir margen 10px
+.mv10
+	margin-bottom: 10px
+	margin-top: 10px
+
+// Botones
+$botones: lrg large normal, med medium normal, sml small normal, lrg-b large borde, med-b medium borde, sml-b small borde
+@each $boton in $botones
+	$class: nth($boton, 1)
+	$size: nth($boton, 2)
+	$style: nth($boton, 3)
+	.btn-#{$class}
+		+boton($size, $style)

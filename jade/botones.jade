@@ -1,0 +1,19 @@
+extends templates/_page
+
+block pageTitle
+	h1 Mixin Botones
+
+block pageContent
+	section
+		p Los siguientes botones han sido generados con el mixin Botones. Por el momento hay dos tipos de botones (con y sin borde) y tres tamaños (grande, mediano y pequeño).
+		p Cada botón se comportará de manera modular, ajustándose a los diferentes breakpoints que se hayan configurado para el proyecto
+		- var btn_lrg = {clase: 'btn-lrg', tamaño: 'grande'}
+		- var btn_med = {clase: 'btn-med', tamaño: 'mediano'}
+		- var btn_sml = {clase: 'btn-sml', tamaño: 'pequeño'}
+		- var btn_lrg_borde = {clase: 'btn-lrg-b', tamaño: 'grande'}
+		- var btn_med_borde = {clase: 'btn-med-b', tamaño: 'mediano'}
+		- var btn_sml_borde = {clase: 'btn-sml-b', tamaño: 'pequeño'}
+		- var botones = [btn_lrg, btn_med, btn_sml, btn_lrg_borde, btn_med_borde, btn_sml_borde]
+		each boton in botones
+			div(class='mv10')
+				a(href='#' class='#{boton.clase}' title='Botón de tamaño #{boton.tamaño}') Botón #{boton.tamaño}

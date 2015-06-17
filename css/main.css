@@ -443,3 +443,92 @@ footer a:hover:before {
     font-size: 16px;
   }
 }
+
+.mv10 {
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.btn-lrg {
+  display: inline-block;
+  font-size: 28px;
+  padding: 28px 67.2px;
+  background-color: #bdc3c7;
+  color: white;
+}
+.btn-lrg:hover {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.btn-med {
+  display: inline-block;
+  font-size: 20px;
+  padding: 20px 48px;
+  background-color: #bdc3c7;
+  color: white;
+}
+.btn-med:hover {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.btn-sml {
+  display: inline-block;
+  font-size: 14px;
+  padding: 14px 33.6px;
+  background-color: #bdc3c7;
+  color: white;
+}
+.btn-sml:hover {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.btn-lrg-b {
+  display: inline-block;
+  font-size: 28px;
+  padding: 28px 67.2px;
+  background-color: #ecf0f1;
+  border-color: #bdc3c7;
+  border-style: solid;
+  border-width: 2px;
+  color: #95a5a6;
+}
+.btn-lrg-b:hover {
+  background-color: #e74c3c;
+  border-color: #c0392b;
+  color: white;
+}
+
+.btn-med-b {
+  display: inline-block;
+  font-size: 20px;
+  padding: 20px 48px;
+  background-color: #ecf0f1;
+  border-color: #bdc3c7;
+  border-style: solid;
+  border-width: 2px;
+  color: #95a5a6;
+}
+.btn-med-b:hover {
+  background-color: #e74c3c;
+  border-color: #c0392b;
+  color: white;
+}
+
+.btn-sml-b {
+  display: inline-block;
+  font-size: 14px;
+  padding: 14px 33.6px;
+  background-color: #ecf0f1;
+  border-color: #bdc3c7;
+  border-style: solid;
+  border-width: 2px;
+  color: #95a5a6;
+}
+.btn-sml-b:hover {
+  background-color: #e74c3c;
+  border-color: #c0392b;
+  color: white;
+}
