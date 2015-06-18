@@ -1,1 +1,12 @@
-// Buttons
+// Botones
+
+// Nested list que define todos los tipos de botones
+$botones: lrg large normal, med medium normal, sml small normal, lrg-b large borde, med-b medium borde, sml-b small borde
+
+// Secuencia para crear todas las clases de botones
+@each $boton in $botones
+	$class: nth($boton, 1)
+	$size: nth($boton, 2)
+	$style: nth($boton, 3)
+	.btn-#{$class}
+		+boton($size, $style)

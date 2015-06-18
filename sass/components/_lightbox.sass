@@ -1,0 +1,34 @@
+// Lightbox
+.lightbox
+	ul
+		@extend %reset-list
+		li
+			> label
+				cursor: pointer
+				+boton(large, normal, block)
+				margin-bottom: 10px
+			> input
+				@extend %hidden
+				&:checked + .overlay
+					@include transition($transition)
+					opacity: 1
+					z-index: 100
+
+			.overlay
+				background-color: $color-sec
+				@include box-sizing(border-box)
+				color: $color-light
+				opacity: 0
+				height: 100vh
+				left: 0
+				padding: 30px 70px
+				position: fixed
+				overflow: scroll
+				top: 0
+				width: 100%
+				z-index: -1
+				> label
+					+boton(large, contraste, block)
+					margin: 50px 0
+	#close
+		display: none

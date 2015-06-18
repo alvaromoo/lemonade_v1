@@ -5,13 +5,18 @@ block pageTitle
 
 block pageContent
 	section.lightbox
-		each parrafo in [12, 25, 15, 21, 18, 12]
-			p
-				mixin lipsum(parrafo, 'sentences')
-		footer
-			a(href='receptor', class='lanzador btn-lrg') Lanzador
-		section(id='receptor')
-			h2 Contenido del lightbox ya lanzado
-			each parrafo in [12, 14, 15, 12, 14, 15, 15, 12, 14, 15]
-				p
-					mixin lipsum(parrafo, 'sentences')
+		p Este es el Lightbox de Lemonade. Se trata de un moderno y ligero sistema para superponer capas de información sobre tu contenido principal.
+		p No busques Javascript, que no hay.
+		ul
+			- lightbox1 = {}
+			each lanzador, i in [1, 2, 3, 4]
+				li
+					label(for='lightbox-#{i + 1}') Lightbox #{i + 1}
+					input(type='radio' id='lightbox-#{i + 1}' name='lightbox')
+					div.overlay
+						h2 Lightbox #{i + 1}
+						each parrafo in [12, 25, 15, 21, 18, 12]
+							p
+								mixin lipsum(parrafo, 'sentences')
+						label(for='close' title='Cerrar lightbox') Cerrar
+		input(type='radio' id='close' name='lightbox')

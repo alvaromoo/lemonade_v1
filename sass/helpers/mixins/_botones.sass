@@ -1,17 +1,25 @@
 // Botones
-=boton($size: medium, $type: normal)
-	display: inline-block
+=boton($size: medium, $type: normal, $display: inline)
+	cursor: pointer
+	text-align: center
+	@include transition($transition)
 	
 	// Tamaños
 	$buttons: large $btn-large, medium $btn-medium, small $btn-small
-	
 	@each $button in $buttons
 		$name: nth($button, 1)
 		$value: nth($button, 2)
-		
 		@if $size == $name
 			font-size: $value
 			padding: $value $value * $btn-coeficiente
+
+	// Display
+	$displays: inline inline-block, block block
+	@each $width in $displays
+		$name: nth($width, 1)
+		$value: nth($width, 2)
+		@if $display == $name
+			display: $value
 
 	// Tipo | Normal
 	@if $type == normal
@@ -32,3 +40,10 @@
 			background-color: $color-sec
 			border-color: $color-sec-dark
 			color: $color-light
+
+	// Tipo | Inverso
+	@if $type == contraste
+		background-color: $color-light
+		color: $color-sec
+		&:hover
+			background-color: $color-main

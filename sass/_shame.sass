@@ -66,16 +66,10 @@ footer
 		@extend %grid-item
 
 // Menú Tabs
-$color-tab-active: $flat-red-1
-$color-tab-hover: $flat-red-2
-$color-tab-inactive: white
+$color-tab-active: $color-sec
+$color-tab-hover: $color-sec-dark
+$color-tab-inactive: $color-light
 $color-tab-border: $color-tab-hover
-
-%reset-list
-	margin: 0
-	padding: 0
-	li
-		list-style: none
 
 .menu-tab
 	border: 1px solid $color-tab-border
@@ -140,31 +134,6 @@ $color-tab-border: $color-tab-hover
 .mv10
 	margin-bottom: 10px
 	margin-top: 10px
-
-// Botones
-$botones: lrg large normal, med medium normal, sml small normal, lrg-b large borde, med-b medium borde, sml-b small borde
-@each $boton in $botones
-	$class: nth($boton, 1)
-	$size: nth($boton, 2)
-	$style: nth($boton, 3)
-	.btn-#{$class}
-		+boton($size, $style)
-
-// Lightbox
-.lightbox
-	#receptor
-		background-color: $color-sec
-		@include box-sizing(border-box)
-		color: $color-light
-		display: none
-		height: 100vh
-		left: 0
-		padding: 30px 70px
-		position: fixed
-		overflow: scroll
-		top: 0
-		width: 100%
-		z-index: 100
 
 // Iframe
 div[class^='iframe']
