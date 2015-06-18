@@ -4,5 +4,7 @@
 - var tab = {nombre: 'Tabs', archivo: 'tab'}
 - var breakpoints = {nombre: 'Breakpoints', archivo: 'breakpoints'}
 - var botones = {nombre: 'Botones', archivo: 'botones'}
-each pagina in [portada, lorem, grid, tab, breakpoints, botones]
+- var lightbox = {nombre: 'Lightbox', archivo: 'lightbox'}
+- var iframe = {nombre: 'Iframe', archivo: 'iframe'}
+each pagina in [portada, lorem, grid, tab, breakpoints, botones, lightbox, iframe]
 	a(href='#{pagina.archivo}.html') #{pagina.nombre}

@@ -1,3 +1,5 @@
+html,body
+	height: 100%
 body
 	> header
 		h1
@@ -147,3 +149,27 @@ $botones: lrg large normal, med medium normal, sml small normal, lrg-b large bor
 	$style: nth($boton, 3)
 	.btn-#{$class}
 		+boton($size, $style)
+
+// Lightbox
+.lightbox
+	#receptor
+		background-color: $color-sec
+		@include box-sizing(border-box)
+		color: $color-light
+		display: none
+		height: 100vh
+		left: 0
+		padding: 30px 70px
+		position: fixed
+		overflow: scroll
+		top: 0
+		width: 100%
+		z-index: 100
+
+// Iframe
+div[class^='iframe']
+	margin: 50px 0
+
+.iframe-1
+	iframe
+		// display: none

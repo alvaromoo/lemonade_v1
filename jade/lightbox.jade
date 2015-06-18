@@ -1,0 +1,17 @@
+extends templates/_page
+
+block pageTitle
+	h1 Lightbox
+
+block pageContent
+	section.lightbox
+		each parrafo in [12, 25, 15, 21, 18, 12]
+			p
+				mixin lipsum(parrafo, 'sentences')
+		footer
+			a(href='receptor', class='lanzador btn-lrg') Lanzador
+		section(id='receptor')
+			h2 Contenido del lightbox ya lanzado
+			each parrafo in [12, 14, 15, 12, 14, 15, 15, 12, 14, 15]
+				p
+					mixin lipsum(parrafo, 'sentences')

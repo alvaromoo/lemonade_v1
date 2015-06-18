@@ -235,6 +235,10 @@ a {
   transition: all 0.2s ease-in;
 }
 
+html, body {
+  height: 100%;
+}
+
 body > header h1 {
   background-color: #f1c40f;
   border-bottom: 5px solid white;
@@ -531,4 +535,25 @@ footer a:hover:before {
   background-color: #e74c3c;
   border-color: #c0392b;
   color: white;
+}
+
+.lightbox #receptor {
+  background-color: #e74c3c;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  color: white;
+  display: none;
+  height: 100vh;
+  left: 0;
+  padding: 30px 70px;
+  position: fixed;
+  overflow: scroll;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+div[class^='iframe'] {
+  margin: 50px 0;
 }
