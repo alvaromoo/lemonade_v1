@@ -37,8 +37,16 @@ html(lang='es')
 		each css in ['main']
 			link(rel='stylesheet', href='../css/#{css}.css', type='text/css')
 
-		//- Javascripts
-		each js in ['http://code.jquery.com/jquery-1.11.3.min.js', '../js/min/script.min.js', '../js/min/iframe.min.js']
+		//- Javascript | Librerías
+		each js in ['http://code.jquery.com/jquery-1.11.3.min.js']
 			script(src='#{js}', type='text/javascript')
-				
+
+		//- Javascript | Plugins
+		each js in ['iframeheight']
+			script(src='../js/vendors/min/#{js}.min.js', type='text/javascript')
+
+		//- Javascript | Propios
+		each js in ['script',  'iframe']
+			script(src='../js/min/#{js}.min.js', type='text/javascript')
+			
 	include ../helpers/_lorem

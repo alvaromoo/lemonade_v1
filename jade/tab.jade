@@ -6,21 +6,40 @@ block pageTitle
 block pageContent
 	div.menu-tab
 		ul.menu-tab-options
-			- opcion1 = {name: 'Pestaña 1', title: 'Pestaña 1'}
-			- opcion2 = {name: 'Pestaña 2', title: 'Pestaña 2'}
-			- opcion3 = {name: 'Pestaña 3', title: 'Pestaña 3'}
-			- opcion4 = {name: 'Pestaña 4', title: 'Pestaña 4'}
-			- opcion5 = {name: 'Pestaña 5', title: 'Pestaña 5'}
-			- tabs = [opcion1.name, opcion2.name, opcion3.name, opcion4.name, opcion5.name]
-			each tab in tabs
+			- denominador = 'Pestaña' + ' '
+			- casos = [1, 2, 3, 4, 5]
+			each tab, i in casos
+				- index = i + 1
+				- pestaña = denominador + index
 				li
-					a(href='#') #{tab}
+					a(href='#' data-tab='#{index}') #{pestaña}
 
 		div.menu-tab-content
-			- contents = [opcion1.title, opcion2.title, opcion3.title, opcion4.title, opcion5.title]
-			each content, i in contents
+			each content, i in casos
+				- index = i + 1
+				- contenido = denominador + index
+				div(data-content='#{index}')
+					h1 #{contenido}
+					each parrafo in [12, 25, 15, 21, 18]
+						p
+							mixin lipsum(parrafo, 'sentences')
+
+	div.menu-tab
+		ul.menu-tab-options
+			- denominador = 'Pestaña' + ' '
+			- casos = [1, 2, 3, 4, 5]
+			each tab, i in casos
+				- index = i + 1
+				- pestaña = denominador + index
+				li
+					a(href='#') #{pestaña}
+
+		div.menu-tab-content
+			each content, i in casos
+				- index = i + 1
+				- contenido = denominador + index
 				div 
-					h1 #{content}
+					h1 #{contenido}
 					each parrafo in [12, 25, 15, 21, 18]
 						p
 							mixin lipsum(parrafo, 'sentences')
