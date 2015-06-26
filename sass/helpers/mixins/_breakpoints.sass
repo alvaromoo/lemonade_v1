@@ -8,29 +8,23 @@ $break-mob-l: 480px
 $break-mob-m: 360px
 $break-mob-s: 320px
 
-// Mixin Responsive
-=respond-to($media)
-  @if $media == desk-xl
-    @media only all and (max-width: $break-desk-xl)
-      @content
-  @else if $media == desk-l
-    @media only all and (max-width: $break-desk-l)
-      @content
-  @else if $media == desk-m
-    @media only all and (max-width: $break-desk-m)
-      @content
-  @else if $media == desk-s
-    @media only all and (max-width: $break-desk-s)
-      @content
-  @else if $media == mob-xl
-    @media only all and (max-width: $break-mob-xl)
-      @content
-  @else if $media == mob-l
-    @media only all and (max-width: $break-mob-l)
-      @content
-  @else if $media == mob-m
-    @media only all and (max-width: $break-mob-m)
-      @content
-  @else if $media == mob-s
-    @media only all and (max-width: $break-mob-s)
-      @content
+// Nested list
+$breaks: (desk-xl, $break-desk-xl), (desk-l, $break-desk-l), (desk-m, $break-desk-m), (desk-s, $break-desk-s), (mob-xl, $break-mob-xl), (mob-l, $break-mob-l), (mob-m, $break-mob-m), (mob-s, $break-mob-s)
+
+// Responsive | A partir de una resolución
+@mixin respond-to($media)
+  @each $break in $breaks
+    $name: nth($break, 1)
+    $value: nth($break, 2)
+    @if $media == $name
+      @media only all and (max-width: $value)
+        @content
+
+// Responsive | Hasta una resolución
+@mixin respond-until($media)
+  @each $break in $breaks
+    $name: nth($break, 1)
+    $value: nth($break, 2)
+    @if $media == $name
+      @media only all and (min-width: $value)
+        @content
