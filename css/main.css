@@ -457,12 +457,12 @@ body > header h1 {
   padding: 60px 30px;
   text-align: center;
 }
-body > article {
+body > main {
   max-width: 800px;
   margin: 0 auto;
   padding: 50px;
 }
-body > article > h1 {
+body > main > h1 {
   margin-top: 0;
 }
 
@@ -589,9 +589,11 @@ footer a:hover:before {
 }
 
 .breakpoints-box {
+  background-color: #bdc3c7;
   color: white;
   display: block;
   height: 400px;
+  font-size: 32px;
   font-weight: 700;
   line-height: 400px;
   text-align: center;
