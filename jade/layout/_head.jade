@@ -20,33 +20,35 @@ html(lang='es')
 		//- 	link(rel='apple-touch-icon', sizes='#{size}x#{size}', href='../images/favicon/apple-icon-#{size}x#{size}.png')
 
 		//- //- Android Favicon
-		//- link(rel='icon', type= 'image/png', sizes='192x192', href='../images/favicon/android-icon-192x192.png')
+		//- link(rel='icon', sizes='192x192', href='../images/favicon/android-icon-192x192.png')
 
 		//- Standart Favicons
 		each size in ['32', '96', '16']
-			link(rel='icon', type= 'image/png', sizes='#{size}x#{size}', href='../images/favicon/favicon-#{size}x#{size}.png')
+			link(rel='icon', sizes='#{size}x#{size}', href='../images/favicon/favicon-#{size}x#{size}.png')
 
 		//- Manifest
 		//- link(rel= 'manifest', href= '../images/favicon/manifest.json')
 
 
-		//- Fontawesome
-		link(rel='stylesheet', href='http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css', type='text/css')
+		//- CSS | Recursos
+		- fontAwesome = 'http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'
+		each  css in [fontAwesome]
+			link(rel='stylesheet', href='#{css}')
 
 		//- CSS
 		each css in ['main']
-			link(rel='stylesheet', href='../css/#{css}.css', type='text/css')
+			link(rel='stylesheet', href='../css/#{css}.css')
 
 		//- Javascript | Librerías
 		each js in ['http://code.jquery.com/jquery-1.11.3.min.js']
-			script(src='#{js}', type='text/javascript')
+			script(src='#{js}')
 
 		//- Javascript | Plugins
 		each js in ['iframeheight']
-			script(src='../js/vendors/min/#{js}.min.js', type='text/javascript')
+			script(src='../js/vendors/min/#{js}.min.js')
 
 		//- Javascript | Propios
 		each js in ['script',  'iframe']
-			script(src='../js/min/#{js}.min.js', type='text/javascript')
+			script(src='../js/min/#{js}.min.js')
 			
 	include ../helpers/_lorem
