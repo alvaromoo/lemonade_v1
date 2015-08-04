@@ -1,0 +1,32 @@
+extends templates/_fullwidth
+
+block pageTitle
+	h1 Swiper
+
+block pageContent
+	article
+		section
+		
+		//- Slider main container
+		.swiper-container
+
+			//- Additional required wrapper
+			.swiper-wrapper
+
+				//- Slides
+				.swiper-slide Slide 1
+				.swiper-slide Slide 2
+				.swiper-slide Slide 3
+				.swiper-slide Slide 4
+				.swiper-slide Slide 5
+
+			//- If we need pagination
+			.swiper-pagination
+
+			//- If we need navigation buttons
+			.swiper-button-prev
+			|     
+			.swiper-button-next
+
+			//- If we need scrollbar
+			.swiper-scrollbar

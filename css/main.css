@@ -488,6 +488,7 @@ nav a:hover {
 }
 
 footer {
+  border-top: 5px solid white;
   padding: 50px;
 }
 footer a {
@@ -656,4 +657,21 @@ footer a:hover:before {
 
 div[class^='iframe'] {
   margin: 50px 0;
+}
+
+.swiper-container {
+  height: 600px;
+}
+.swiper-container .swiper-slide {
+  font-size: 40px;
+  line-height: 600px;
+  text-align: center;
+}
+.swiper-container .swiper-slide:nth-child(odd) {
+  background-color: #ecf0f1;
+  color: #7f8c8d;
+}
+.swiper-container .swiper-slide:nth-child(even) {
+  background-color: #bdc3c7;
+  color: white;
 }

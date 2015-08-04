@@ -39,6 +39,7 @@ nav
 			color: white
 
 footer
+	border-top: 5px solid white
 	padding: 50px
 	a
 		color: $color-grey-light
@@ -144,3 +145,19 @@ div[class^='iframe']
 .iframe-1
 	iframe
 		// display: none
+
+
+// Swiper
+.swiper-container
+	$height: 600px
+	height: $height
+	.swiper-slide
+		font-size: 40px
+		line-height: $height
+		text-align: center
+		&:nth-child(odd)
+			background-color: $color-grey-lightest
+			color: $color-grey-darkest
+		&:nth-child(even)
+			background-color: $color-grey-light
+			color: white

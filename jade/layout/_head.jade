@@ -32,19 +32,22 @@ html(lang='es')
 
 		//- CSS | Recursos
 		- fontAwesome = 'http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'
-		each  css in [fontAwesome]
+		- swiperCSS = 'https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.1.0/css/swiper.min.css'
+		each  css in [fontAwesome, swiperCSS]
 			link(rel='stylesheet', href='#{css}')
 
 		//- CSS
-		each css in ['main']
+		each css in ['main', 'fancybox/jquery.fancybox']
 			link(rel='stylesheet', href='../css/#{css}.css')
 
 		//- Javascript | Librerías
-		each js in ['http://code.jquery.com/jquery-1.11.3.min.js']
+		- jquery = 'http://code.jquery.com/jquery-1.11.3.min.js'
+		- swiperJS = 'https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.1.0/js/swiper.min.js'
+		each js in [jquery, swiperJS]
 			script(src='#{js}')
 
 		//- Javascript | Plugins
-		each js in ['iframeheight']
+		each js in ['iframeheight', 'fancybox']
 			script(src='../js/vendors/min/#{js}.min.js')
 
 		//- Javascript | Propios
