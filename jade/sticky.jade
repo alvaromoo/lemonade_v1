@@ -1,0 +1,12 @@
+extends templates/_page
+
+block pageTitle
+	h1 Sticky notice
+
+block pageContent
+	article
+		h1 Texto para generar scroll
+		p.sticky-element Elemento pegajoso
+		each parrafo in [12, 25, 15, 21, 18, 12, 54]
+			p
+				mixin lipsum(parrafo, 'sentences')

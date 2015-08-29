@@ -16,7 +16,10 @@ block pageContent
 	//- - var url = 'http://www.google.es'
 	//- - var url = 'http://www.elmundo.es'
 
-	each iframe, i in [1]
+	each iframe, i in [1, 2, 3]
 		- index = i + 1
 		div(id='iframe-#{index}')
-			iframe(src='#{url}' frameborder='0' scrolling='no' width='100%')
+			div(class='marcado-extra')
+				div(class='marcado-extra-2')
+					div(class='marcado-extra-3')
+						iframe(src='#{url}' frameborder='0' scrolling='no' width='100%')

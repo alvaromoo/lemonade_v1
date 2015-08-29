@@ -8,5 +8,8 @@
 - var iframe = {nombre: 'Iframe', archivo: 'iframe'}
 - var fancybox = {nombre: 'Fancybox', archivo: 'fancybox'}
 - var swiper = {nombre: 'Swiper', archivo: 'swiper'}
-each pagina in [portada, lorem, grid, tab, breakpoints, botones, lightbox, fancybox, swiper]
+- var focus = {nombre: 'Focus Tab vs Click', archivo: 'focus'}
+- var sticky = {nombre: 'Sticky notice', archivo: 'sticky'}
+- var excerpt = {nombre: 'Excerpt', archivo: 'excerpt'}
+each pagina in [portada, botones, iframe, fancybox, swiper, focus, sticky, excerpt]
 	a(href='#{pagina.archivo}.html') #{pagina.nombre}

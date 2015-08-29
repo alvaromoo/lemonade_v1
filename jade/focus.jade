@@ -1,0 +1,10 @@
+extends templates/_page
+
+block pageTitle
+	h1 Tab focus VS Click focus
+
+block pageContent
+	article
+		each enlace, i in [1, 2, 3, 4]
+			- index = i + 1
+			<a href='#' class='btn-med'>Enlace #{index}</a><br /><br />

@@ -1,0 +1,16 @@
+extends templates/_page
+
+block pageTitle
+	h1 Excerpt more quicktag
+
+block pageContent
+	article
+		h1 Texto excerpt / full
+		each parrafo in [12]
+			p
+				mixin lipsum(parrafo, 'sentences')
+		<!--more-->
+		each parrafo in [15, 18]
+			p
+				mixin lipsum(parrafo, 'sentences')
+		a.see-more.btn-med(href='#') Ver más

@@ -1,5 +1,8 @@
 // iFrame
 $(document).ready(function(){
-    $('#iframe-1 iframe').iframeHeight();
-    // $('#iframe-2 iframe').iframeHeight();
+	$('iframe').iframeHeight();
+	// $('#iframe-2 iframe').iframeHeight();
+	if($('iframe')){
+		$('iframe').trigger('updateIframe');
+	}
 });
