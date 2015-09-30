@@ -1,0 +1,42 @@
+$variables:
+	blanco white,
+	negro black,
+	rojo red,
+	rosa pink,
+	azul blue,
+	verde green,
+	amarillo yellow,
+	naranja orange;
+
+@mixin prueba($fondo: rojo, $texto: naranja, $borde: azul){
+
+	padding: 5px 10px;
+	border-size: 5px;
+	border-style: solid;
+
+	@each $variable in $variables{
+
+		$nombre: nth($variable, 1);
+		$color: nth($variable, 2);
+
+		@if $fondo == $nombre {
+			background-color: $color
+		}
+
+		@if $texto == $nombre {
+			color: $color
+		}
+
+		@if $borde == $nombre {
+			border-color: $color
+		}
+
+	}
+}
+
+.perdon{
+	@include prueba($borde: 'azul');
+	&:hover{
+		@include prueba($fondo: 'verde', $borde: 'amarillo', $texto: 'rojo');
+	}
+}

@@ -707,3 +707,20 @@ div[class^='iframe'] {
   background-color: #bdc3c7;
   color: white;
 }
+
+.perdon {
+  padding: 5px 10px;
+  border-size: 5px;
+  border-style: solid;
+  background-color: red;
+  border-color: blue;
+  color: orange;
+}
+.perdon:hover {
+  padding: 5px 10px;
+  border-size: 5px;
+  border-style: solid;
+  color: red;
+  background-color: green;
+  border-color: yellow;
+}

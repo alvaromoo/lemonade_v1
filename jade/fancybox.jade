@@ -8,5 +8,11 @@ block pageContent
 		section
 		h2 Fancybox
 		p Campo de pruebas de Fancybox en su versión 2.1.5
-		a.btn-lrg.fancybox(href='modals/modal-1.html', data-fancybox-type='ajax') Fancybox tipo Ajax
-		a.btn-lrg.fancybox(href='http://vodafone.es', data-fancybox-type='iframe') Fancybox tipo Iframe
+		a.btn-lrg.fancybox(href='modals/modal-1.html', data-fancybox-type='ajax', data-fancybox-maxwidth='750px', data-fancybox-minheight='300px') Fancybox tipo Ajax
+		br
+		br
+		a.btn-lrg.fancybox(href='modals/modal-1.html', data-fancybox-type='ajax', data-fancybox-maxwidth='150px') Fancybox tipo Ajax 2
+		br
+		br
+		a.btn-lrg.fancybox(href='modals/modal-1.html', data-fancybox-type='ajax') Fancybox tipo Ajax (sin maxWidth)
+		//- a(class='btn-lrg fancybox fancybox.iframe' href='https://www.google.es/', data-fancybox-maxwidth='400px') Fancybox tipo Iframe
